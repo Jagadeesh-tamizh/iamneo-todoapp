@@ -4,9 +4,9 @@
 }
 
 .header {
-  font-size: 3rem;
   text-align: center;
   font-weight: 700;
+  font-size: 3rem;
   margin: auto;
   width: auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -18,8 +18,8 @@
   margin-top: 50px;
   padding: 30px;
   text-align: center;
-  width: auto;
-  background: #00b09b; /* fallback for old browsers */
+  width: 756px;
+  background: #00b09b;
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(14, 174, 87, 1) 0%,
@@ -54,10 +54,9 @@
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
-
+  width: 232px;
   resize: none;
   height: auto;
-  width: 100%;
 }
 
 .kanban__dropzone {
