@@ -115,14 +115,6 @@
   );
 }
 
-#hint {
-  background: linear-gradient(45deg, #0ccda3, #c1fcd3);
-}
-p {
-  font-weight: bolder;
-  font-family: system-ui;
-  margin-left: 3rem;
-}
 
 .closebutton {
   position: relative;
