@@ -1,6 +1,6 @@
 function random() {
-  var crypto = window.crypto;
-  var typedArray = new Uint8Array(1);
+  let crypto = window.crypto;
+  let typedArray = new Uint8Array(1);
   crypto.getRandomValues(typedArray);
   return typedArray;
 }
