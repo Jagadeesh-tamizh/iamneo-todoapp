@@ -33,11 +33,6 @@ export default class Item {
     };
 
     this.elements.input.addEventListener("blur", onBlur);
-    // this.elements.root.addEventListener("dblclick", () => {
-    //   KanbanAPI.deleteItem(id);
-    //   this.elements.input.removeEventListener("blur", onBlur);
-    //   this.elements.root.parentElement.removeChild(this.elements.root);
-    // });
 
     this.elements.input.button.addEventListener("click", () => {
       KanbanAPI.deleteItem(id);
