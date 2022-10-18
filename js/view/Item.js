@@ -10,6 +10,8 @@ export default class Item {
     this.elements.input = this.elements.root.querySelector(
       ".kanban__item-input"
     );
+    this.elements.input.button =
+      this.elements.root.querySelector(".closebutton");
 
     this.elements.root.dataset.id = id;
     this.elements.input.textContent = content;
@@ -31,7 +33,13 @@ export default class Item {
     };
 
     this.elements.input.addEventListener("blur", onBlur);
-    this.elements.root.addEventListener("dblclick", () => {
+    // this.elements.root.addEventListener("dblclick", () => {
+    //   KanbanAPI.deleteItem(id);
+    //   this.elements.input.removeEventListener("blur", onBlur);
+    //   this.elements.root.parentElement.removeChild(this.elements.root);
+    // });
+
+    this.elements.input.button.addEventListener("click", () => {
       KanbanAPI.deleteItem(id);
       this.elements.input.removeEventListener("blur", onBlur);
       this.elements.root.parentElement.removeChild(this.elements.root);
@@ -53,7 +61,9 @@ export default class Item {
 
     return range.createContextualFragment(`
 			<div class="kanban__item" draggable="true">
-				<div class="kanban__item-input" contenteditable></div>
+				<div class="kanban__item-input" contenteditable>
+        </div>
+        <button class="closebutton"><i class="fa-solid fa-trash-can"></i></button>
 			</div>
 		`).children[0];
   }

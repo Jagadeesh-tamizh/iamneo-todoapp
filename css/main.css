@@ -123,3 +123,12 @@ p {
   font-family: system-ui;
   margin-left: 3rem;
 }
+
+.closebutton {
+  position: relative;
+  left: 100px;
+  bottom: 27px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
