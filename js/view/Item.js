@@ -10,7 +10,7 @@ export default class Item {
     this.elements.input = this.elements.root.querySelector(
       ".kanban__item-input"
     );
-    this.elements.input.button =
+    this.elements.input.deletebutton =
       this.elements.root.querySelector(".closebutton");
 
     this.elements.root.dataset.id = id;
@@ -34,7 +34,7 @@ export default class Item {
 
     this.elements.input.addEventListener("blur", onBlur);
 
-    this.elements.input.button.addEventListener("click", () => {
+    this.elements.input.deletebutton.addEventListener("click", () => {
       KanbanAPI.deleteItem(id);
       this.elements.input.removeEventListener("blur", onBlur);
       this.elements.root.parentElement.removeChild(this.elements.root);
