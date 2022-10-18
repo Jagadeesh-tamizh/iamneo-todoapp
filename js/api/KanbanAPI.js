@@ -53,7 +53,7 @@ export default class KanbanAPI {
     item.content =
       newProps.content === undefined ? item.content : newProps.content;
 
-    // Update column and position
+    // Update position and column
     if (newProps.columnId !== undefined && newProps.position !== undefined) {
       const targetColumn = data.find(
         (column) => column.id == newProps.columnId
